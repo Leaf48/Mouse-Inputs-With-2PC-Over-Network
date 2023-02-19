@@ -39,30 +39,10 @@ while True:
         left = int(res_pattern.group(4))
 
         print(f"x: {x} | y: {y} | right: {right} | left: {left}")
-        # mouse.position = (x, y)
-        pyautogui.moveTo(x, y)
+        mouse.position = (x, y)
+        # pyautogui.moveTo(x, y)
 
-        # if right == 0:
-        #     mouse.release(Button.right)
-        # elif right == 1:
-        #     mouse.press(Button.right)
 
-        # if left == 0:
-        #     mouse.release(Button.left)
-        # elif left == 1:
-        #     mouse.press(Button.left)
-
-        if left == 1:
-            if clickCooldown == 0:
-                mouse.click(Button.left)
-                clickCooldown += 1
-            elif 1 <= clickCooldown < cooldown:
-                clickCooldown += 1
-
-                if clickCooldown == cooldown - 1: clickCooldown += 1
-
-            elif clickCooldown == cooldown:
-                clickCooldown = 0
 
 
 
